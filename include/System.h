@@ -203,10 +203,12 @@ private:
     eSensor mSensor;
 
     // ORB vocabulary used for place recognition and feature matching.
-    ORBVocabulary* mpVocabulary;
+    // ORB词袋 用于地点识别和特征匹配的ORB词汇表
+    ORBVocabulary* mpVocabulary; // 加载ORB词袋模型
 
     // KeyFrame database for place recognition (relocalization and loop detection).
-    KeyFrameDatabase* mpKeyFrameDatabase;
+    // 用于位置识别（重新定位和循环检测）的关键帧数据库。
+    KeyFrameDatabase* mpKeyFrameDatabase;   // 创建关键帧数据集，数据集中 主要存放词袋模型里的值，这些值用于闭环检测和重定位
 
     // Map structure that stores the pointers to all KeyFrames and MapPoints.
     //Map* mpMap;
